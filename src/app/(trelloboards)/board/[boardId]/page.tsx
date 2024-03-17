@@ -1,8 +1,10 @@
 import ListContainer from "@/components/ListContainer";
 import { prismaDB } from "@/providers/connection";
+import { unstable_noStore as nostore } from "next/cache";
 import React from "react";
 
 const BoardPage = async ({ params }: { params: { boardId: string } }) => {
+  nostore()
   const list = await prismaDB.list.findMany({
     where: { boardId: params.boardId },
     include: {

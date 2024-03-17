@@ -2,6 +2,7 @@ import BoardList from "@/components/BoardList";
 import OrgHeader from "@/components/OrgHeader";
 import { prismaDB } from "@/providers/connection";
 import React from "react";
+import { unstable_noStore as nostore } from "next/cache";
 
 interface OrgIdProps {
   params: {
@@ -10,6 +11,7 @@ interface OrgIdProps {
 }
 
 const Organization = async ({ params: { organizationId } }: OrgIdProps) => {
+  nostore()
   const getOrganization = await prismaDB.organization.findUnique({
     where: {
       id: organizationId,
