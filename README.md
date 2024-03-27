@@ -32,7 +32,7 @@ Make sure you have the following installed on your machine:
 **Clone this Project**
 
 ```bash
-git clone https://github.com/CodeScrapper1/trello-clone.git
+git clone https://github.com/VishwasSingh1724/Boards-App
 cd trello-clone
 ```
 
