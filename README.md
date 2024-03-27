@@ -33,7 +33,7 @@ Make sure you have the following installed on your machine:
 
 ```bash
 git clone https://github.com/VishwasSingh1724/Boards-App
-cd trello-clone
+cd Boards-app
 ```
 
 **Installation**
